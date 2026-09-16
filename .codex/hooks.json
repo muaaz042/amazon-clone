@@ -1,0 +1,31 @@
+{
+  "description": "Capture user prompts and final assistant responses for the 8x assignment.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"D:\\Projects\\amazon-clone\\.codex\\hooks\\capture-turn.mjs\"",
+            "commandWindows": "node \"D:\\Projects\\amazon-clone\\.codex\\hooks\\capture-turn.mjs\"",
+            "timeout": 10,
+            "statusMessage": "Capturing prompt"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"D:\\Projects\\amazon-clone\\.codex\\hooks\\capture-turn.mjs\"",
+            "commandWindows": "node \"D:\\Projects\\amazon-clone\\.codex\\hooks\\capture-turn.mjs\"",
+            "timeout": 10,
+            "statusMessage": "Capturing response"
+          }
+        ]
+      }
+    ]
+  }
+}
